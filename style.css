@@ -32,11 +32,6 @@ body{
     height: 170px;
 }
 
-hr{
-    width: 3px;
-    height: 90vh;
-    background-color: blueviolet;
-}
 
 .user_action img{
     transform: rotate(-90deg)  ;
@@ -52,7 +47,7 @@ hr{
     border-left: 4px solid blueviolet;
     border-right: 4px solid blueviolet;
     width: 30%;
-    height: 90.5vh;
+    height: 91vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
