@@ -47,7 +47,7 @@ body{
     border-left: 4px solid blueviolet;
     border-right: 4px solid blueviolet;
     width: 30%;
-    height: 99vh;
+    height: 89vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
