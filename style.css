@@ -1,0 +1,187 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+    /* overflow: hidden; */
+    user-select: none;
+}
+
+body{
+    background-color: yellow;
+}
+
+.navbar{
+    text-align: center;
+    background-color: blueviolet;
+    color: white;
+    line-height: 60px;
+    height: 60px;
+}
+
+.game{
+    display: flex;
+    /* justify-content: space-evenly; */
+    justify-content: space-between;
+}
+
+.computer_action img{
+    transform: rotate(90deg);
+    height: 170px;
+}
+
+hr{
+    width: 3px;
+    height: 90vh;
+    background-color: blueviolet;
+}
+
+.user_action img{
+    transform: rotate(-90deg)  ;
+    transition: 1s all ease-in;
+    cursor: pointer;
+  
+    height: 170px;
+    /* transform: translatex(10px); */
+}
+
+.score_container{
+    background-color: white;
+    border-left: 4px solid blueviolet;
+    border-right: 4px solid blueviolet;
+    width: 30%;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.both_scores{
+    padding: 10px;
+    height: 30vh;
+
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.select_button{
+    width: 40%;
+    height: 40px;
+    color: white;
+    background-color: rgb(94, 30, 153);
+    border-radius: 20px;
+    cursor: pointer;
+    border: none;
+}
+
+.user_score{
+    text-align: center;
+}
+
+.comp_score{
+    text-align: center
+}
+
+@media screen and (max-width:1100px) {
+
+    .both_scores{
+        /* background-color: yellow; */
+        width: 90%;
+    }
+    .select_button{
+        width: 60%;
+    }
+}
+
+@media screen and (max-width:700px) {
+    .game{
+        justify-content: space-evenly;
+
+    }
+
+    .score_container{
+        width: 50%;
+    }
+    .both_scores{
+        /* background-color: yellow; */
+        width: 90%;
+    }
+    .select_button{
+        width: 60%;
+    }
+}
+
+@media screen and (max-width:500px) {
+    .game{
+        justify-content: space-evenly;
+
+    }
+
+    .score_container{
+        width: 50%;
+    }
+    .both_scores p{
+        /* background-color: yellow; */
+        font-size: 8px;
+    }
+    .select_button{
+        width: 60%;
+    }
+}
+
+@media screen and (max-width:400px) {
+    .game{
+        justify-content: space-evenly;
+
+    }
+
+    .score_container{
+        width: 30%;
+    }
+    .score_container h1{
+        font-size: 25px;
+
+    }
+
+    .both_scores h1{
+        font-size: 20px;
+    }
+    .both_scores p{
+        /* background-color: yellow; */
+        font-size: 8px;
+    }
+
+    .computer_action{
+        display: flex;
+        flex-direction: column;
+        gap: 70px;
+    }
+
+    .computer_action img{
+        height: 120px;
+    }
+
+    .user_action{
+        display: flex;
+        flex-direction: column;
+        gap: 60px;
+    }
+
+    .user_action img{
+        height: 120px;
+    }
+
+    .both_scores{
+        gap: 20px;
+        /* background-color: red; */
+    }
+    .select_button{
+        height: 30px;
+        width: 80%;
+    }
+}

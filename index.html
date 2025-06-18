@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="navbar">
+      <h1>Rock Paper Scissors</h1>
+    </div>
+    <div class="game">
+      <div class="computer_action">
+        <div class="comp_choices">
+          <img src="images/1.png" alt="" />
+        </div>
+        <div class="comp_choices">
+          <img src="images/3.png" alt="" />
+        </div>
+        <div class="comp_choices">
+          <img src="images/2.png" alt="" />
+        </div>
+      </div>
+      <div class="score_container">
+        <h1>SCORE</h1>
+        <div class="both_scores">
+          <div class="comp_score">
+            <h1 id="comp_score">0</h1>
+            <p>Computer</p>
+          </div>
+
+          <div class="user_score">
+            <h1 id="user_score">0</h1>
+            <p>Player</p>
+          </div>
+        </div>
+        <button class="select_button"><p>Play</p></button>
+      </div>
+      <div class="user_action">
+        <div class="choice" id="rock" value="1">
+          <img src="images/1.png" alt="" />
+        </div>
+        <div class="choice" id="paper" value="2">
+          <img src="images/3.png" alt="" />
+        </div>
+        <div class="choice" id="scissor" value="3">
+          <img src="images/2.png" alt="" />
+        </div>
+      </div>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>
