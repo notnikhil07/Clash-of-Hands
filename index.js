@@ -28,45 +28,45 @@ let comIndex = -1;
 
 const genCompChoice = () => {
   const randIdx = Math.floor(Math.random() * 3);
+  // setTimeout(() => {
+  compChoices[randIdx].style.transform = "translatex(100px)";
   setTimeout(() => {
-    compChoices[randIdx].style.transform = "translatex(100px)";
-    setTimeout(() => {
-      compChoices[randIdx].style.transform = "translatex(0px)";
-    }, 500);
+    compChoices[randIdx].style.transform = "translatex(0px)";
   }, 500);
+  // }, 200);
 
   comIndex = randIdx;
   return options[randIdx];
 };
 
 const playGame = (userChoice) => {
-  console.log("User choice = ", userChoice);
-  const compChoice = genCompChoice();
-  console.log("comp choice = ", compChoice);
-  if (userChoice == compChoice) {
-    pickBtn.innerText = "Game Draw";
-    pickBtn.style.backgroundColor = "grey";
-  } else {
-    let UserWin = true;
-    if (userChoice == "1") {
-      UserWin = compChoice == "2" ? false : true;
-    } else if (userChoice == "2") {
-      UserWin = compChoice == "3" ? false : true;
-    } else if (userChoice == "3") {
-      UserWin = compChoice == "1" ? false : true;
+  setTimeout(() => {
+    console.log("User choice = ", userChoice);
+    const compChoice = genCompChoice();
+    console.log("comp choice = ", compChoice);
+    if (userChoice == compChoice) {
+      pickBtn.innerText = "Game Draw";
+      pickBtn.style.backgroundColor = "grey";
+    } else {
+      let UserWin = true;
+      if (userChoice == "1") {
+        UserWin = compChoice == "2" ? false : true;
+      } else if (userChoice == "2") {
+        UserWin = compChoice == "3" ? false : true;
+      } else if (userChoice == "3") {
+        UserWin = compChoice == "1" ? false : true;
+      }
+      showWinner(UserWin);
     }
-    showWinner(UserWin);
-  }
+  }, 300);
 };
 
 choices.forEach((choice, index) => {
   // console.log(choice);
   choice.addEventListener("click", () => {
+    choice.style.transform = "translatex(-100px)";
     setTimeout(() => {
-      choice.style.transform = "translatex(-100px)";
-      setTimeout(() => {
-        choice.style.transform = "translatex(0px)";
-      }, 500);
+      choice.style.transform = "translatex(0px)";
     }, 500);
 
     // console.log("SELECTED CHOICE", index)
